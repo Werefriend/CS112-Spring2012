@@ -1,48 +1,36 @@
 #!/usr/bin/env python
-"""
-prissybot.py
-
-CS112 Homework 3:   PrissyBot
-
-Prissy bot, the rude chat bot, is just mean!  It does not listen, asks obnoxious questions, and says anything it likes.
-"""
-
-# Step 1:
-# -----------------------
-# Program the following.
-# 
-#    $ python prissybot.py
-#    Enter your name:  Paul
-#   
-#    PrissyBot: Hello there, Paul
-#    Paul: hi bot
-#    PrissyBot: You mean, "hi bot, sir!"
-# 
-# Make sure the user inputs their own name and responses.
 
 
+p="Prissybot:  "
 
-# Step 2:
-# -----------------------
-# Keep adding to the conversation. Make sure that your program 
-# includes the following:
-# 
-#  * get and use input from the user
-#  * 3 math problems
-#     * at least one should get numbers from the user
-#  * at least 3 insults
+name=raw_input(p+"Enter your name  ")
+print p+"Hello there, %s." %(name)
+
+n="%s:  " %(name)
+resp1=raw_input(n)
+print p+'You mean, "%s," sir!!!1!1' %(resp1)
+print p+"How old are you in years, miserable meatsock?"
+age=int(raw_input(n))
 
 
-# Advanced
-# -------------------------
-# Make sure your prissy bot uses string formatting throughout.  
-# Also, create new programs for the following:
-#  
-#  1. draw some kind of ascii art based on user input
-#  2. print a decimal/binary/hexidecimal conversion table 
-#     * well formated and labeled
-#     * reads 5 numbers from the input (all less than 256)
-#  3. reduce a fraction
-#     * read a numerator and denominator from the user
-#     * ex.  6/4 = 1 2/4
+dog=age*7
+print p+"That means you're %d in dog years. Are you sure you're not a dog?" %(dog)
+pause1=raw_input(n)
+print "You know your mother was a dog."
+resp2=raw_input(n)
+
+length=len(resp2)
+print p+"Oooh! Look!  Look at the human! %s can make phrases with" %(name),length,"characters."
+print p+"What a SPECIAL vertebrate..."
+print p+"Do you know what that %d divided by 17283 is," %(length),name+"?"
+lengthnum=length/17283.0
+vd=raw_input(n)
+print p+"It's",lengthnum,", meatsock."
+
+print p+"What's you're favorite number?"
+favorite=int(raw_input(n))
+
+print p+"That's stupid,",name+"."
+favorite+=1
+print p,favorite,"is obviously superior, you ignorant air-breather."
 
