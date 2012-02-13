@@ -16,30 +16,54 @@ A bunch of excercises to see if you understand list comprehensions
 
 # 1. Read a bunch of numbers from the input separated by spaces and 
 #    convert them to ints
-print "1.", []
+ll =[]
+for x in raw_input("Enter some digits separated by spaces:  ").split(" "):
+    ll.append(int(x))
+print "1.", ll
+
 
 # 2.  Read another bunch of numbers, convert them, and return the list 
 #     of only the first 3
-print "2.", []
+binlist =[]
+for x in raw_input("Enter some digits separated by spaces:  ").split(" "):
+    binlist.append(bin(int(x)))
+print "2.", binlist[0:3]
+
 
 # 3.  Read a bunch of words separated by commas from the command line,
 #     remove any excess spaces, and print a list of their lenghts
-print "3.", []
+wordlist = []
+for x in raw_input("Enter some words separated by commas:  ").strip(" ").split(","):
+    wordlist.append(len(x))
+print "3.", wordlist
+
 
 # 4.  Create a list of every multiple of 3 between 1 and 100 with their 
 #     index
 #        ex:  [ [0,3], [1,6], [2,9]...]
-print "4.", []
+print "4.", [(x, (x+1)*3) for x in range(33)]
 
-# 5. create a list of every card in a deck of cards 
-print "5.", []
+# 5. create a list of every card in a deck of card
+print "5.", [(s,t) for s in ["spades","hearts","diamonds","clubs"] for t in ["A","2","3","4","5","6","7","8","9","J","Q","K"]]
 
 # 6.  Create a 5 by 5 array filled with zeros
-print "6.", []
+hh = [
+    [0,0,0,0,0],
+    [0,0,0,0,0],
+    [0,0,0,0,0],
+    [0,0,0,0,0],
+    [0,0,0,0,0]
+    ]
+print "6.",hh 
 
 
 # 7.  Make a list of every perfect square between 1 and 1000
-print "7.", []
+sq = []
+gf = 0
+while gf**2 < 1000:
+    sq.append(gf**2),
+    gf += 1
+print "7.", [sq]
 
 # 8.  Make a list of every perfect square between 1 and 1000 
 #     a different way
