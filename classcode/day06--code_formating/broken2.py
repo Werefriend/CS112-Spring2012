@@ -1,18 +1,24 @@
 #!/usr/bin/env python
 from random import randint
-s=1
-t=int(raw_input())
-rr=[]
-for _ in range(t):
-    rr.append(randint(0,20))
-print rr
-while s:
-    s=0
-    for var in range(1,t):
-        if rr[var-1]>rr[var]:
-            t1=rr[i-1]
-            t2=rr[i]
-            rr[i-1]=t2
-            rr[i]=t1
-            s=1
-print rr
+
+mysterious_num = 1
+num_input = int(raw_input())
+num_list = []
+
+for number in range(num_input):
+    num_list.append(randint(0,20))
+
+print num_list
+
+
+while mysterious_num == 0:
+    for bug in range(1,num_input):
+        if num_list[bug-1] > num_list[var]:
+            t1 = num_list[bug-1]
+            t2 = num_list[bug]
+            num_list[bug-1] = t2
+            num_list[bug] = t1
+            mysterious_num = 1
+
+
+print num_list

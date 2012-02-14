@@ -16,71 +16,55 @@ A bunch of excercises to see if you understand list comprehensions
 
 # 1. Read a bunch of numbers from the input separated by spaces and 
 #    convert them to ints
-ll =[]
-for x in raw_input("Enter some digits separated by spaces:  ").split(" "):
-    ll.append(int(x))
-print "1.", ll
+
+print "1.", [ int(i) for i in raw_input().split(" ") ]
 
 
 # 2.  Read another bunch of numbers, convert them, and return the list 
 #     of only the first 3
-binlist =[]
-for x in raw_input("Enter some digits separated by spaces:  ").split(" "):
-    binlist.append(bin(int(x)))
-print "2.", binlist[0:3]
+
+print "2.", [ int(i) for i in raw_input().split(" ") ][:3]
 
 
 # 3.  Read a bunch of words separated by commas from the command line,
 #     remove any excess spaces, and print a list of their lenghts
-wordlist = []
-for x in raw_input("Enter some words separated by commas:  ").strip(" ").split(","):
-    wordlist.append(len(x))
-print "3.", wordlist
+
+print "3.", [ len(s.strip()) for s in raw_input().split(",") ]
 
 
 # 4.  Create a list of every multiple of 3 between 1 and 100 with their 
 #     index
 #        ex:  [ [0,3], [1,6], [2,9]...]
-print "4.", [(x, (x+1)*3) for x in range(33)]
+
+print "4.", [ (i,v) for i,v in enumerate(range(3,100,3)) ]
 
 # 5. create a list of every card in a deck of card
+
 print "5.", [(s,t) for s in ["spades","hearts","diamonds","clubs"] for t in ["A","2","3","4","5","6","7","8","9","J","Q","K"]]
 
 # 6.  Create a 5 by 5 array filled with zeros
-hh = [
-    [0,0,0,0,0],
-    [0,0,0,0,0],
-    [0,0,0,0,0],
-    [0,0,0,0,0],
-    [0,0,0,0,0]
-    ]
-print "6.",hh 
 
+print "6.", [[ 0 for i in range(5) ] for j in range(5) ]
 
 # 7.  Make a list of every perfect square between 1 and 1000
-sq = []
-gf = 0
-while gf**2 < 1000:
-    sq.append(gf**2),
-    gf += 1
-print "7.", [sq]
+
+print "7.", [ i**2 for i in range(100) if i**2 < 1000 ]
 
 # 8.  Make a list of every perfect square between 1 and 1000 
 #     a different way
-print "8.", []
+import math
+print "8.", [ i for i in range(1000) if math.sqrt(i) % 1 == 0 ]
 
 # 9.  List every python file in this directory
-print "9.", []
+import os
+print "9.", [ s for s in os.listdir(".") if s.endswith(".py")]
 
 # 10.  Print a list of every pythagorean triple with a side less than
 #      or equal to 20.  Don't include duplicates ([3,4,5] == [4,3,5])
-print "10.", []
 
-
-
-# I couldn't in good concious include this, but it is fun to 
-# figure out/find.
-
-## NOT REQUIRED
-# 11.  Print a list of every prime number less than 100
-print "11.", []
+print "10.", [ (x,y,z) 
+               for x in range(1,21)
+               for y in range(1,21)
+               for z in range(1,21)
+               if x**2 + y**2 == z**2 
+                  and x >= y ]
