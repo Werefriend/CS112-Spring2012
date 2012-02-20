@@ -8,18 +8,21 @@ I used this:
 """
 from hwtools import input_nums
 
-nums = inputnums()
+#get input list
+nums = input_nums()
 
+#show input list unchanged
 print "Before sort:"
 print nums
 
-N=len(nums)-1
-for x in range(N)
-    p=x
-    for i in range(x+1 N):
-        if nums[i]<nums[p]:
-            pos=i
-   nums[x],nums[p]=nums[p],nums[x]
+#find minimum, replace successive elements starting with element 0
+N = len(nums)
+for x in range(N):
+    min = x
+    for i in range(x+1, N):
+        if nums[i] < nums[min]:
+            min = i
+            nums[x], nums[min] = nums[min], nums[x]
 
 print "After sort:"
 print nums
