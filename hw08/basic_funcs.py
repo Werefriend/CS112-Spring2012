@@ -11,7 +11,10 @@
 #   >>> greeter("WORLD")
 #   hello, world
 
-# def greeter(name):
+def greeter(name):
+    name = str(name)
+    print "hello,", name.lower()
+
 
 
 # Draw a box
@@ -30,7 +33,30 @@
 #    | |
 #    +-+
 
-# def box(w,h):
+def box(w,h):
+    #checking type
+    if type(w) != int or type(h) != int or w < 1 or h < 1:
+        print "Error: Invalid Dimensions"
+        return
+
+    #first line
+    if w == 1:
+        print "+"
+    else:
+        print "+" + "-"*(w-2) + "+"
+    # mid
+    for i in range(h-2):
+       if w == 1:
+           print "|"
+       else:
+           print "|" + " "*(w-2) + "|"
+    #final line
+    if h > 1:
+        if w == 1:
+            print "+"
+        else:
+            print "+" + "-"*(w-2) + "+"
+
 
 
 
@@ -50,5 +76,15 @@
 #       | |
 #       | |
 
-# def tree()
+def tree(branch=5):
+    tr = []
+    tr.append("    *")
+    tr.append("    ^")
+    tr.append("   ^-^")
+    tr.append("  ^-^-^")
+    tr.append(" ^-^-^-^")
+    tr.append("^-^-^-^-^")
+    tr.append("   | |")
+    tr.append("   | |")
 
+    return "\n".join(tr)
