@@ -19,7 +19,6 @@ clock = pygame.time.Clock()
 screen.fill((0,0,0))
 done = False
 screen_bounds = screen.get_rect()
-winner = 0
 p1x, p1y = 80, 300
 p1dx, p1dy = 0, 0
 p2x, p2y = 720, 300
@@ -61,10 +60,6 @@ def move(x, y, dx, dy, up, down, left, right, bounds):
         playing = False
     return x, y, dx, dy
 
-
-#freeze the screen, indicate a winner, restart with space
-#def finito():
-
 #mo'fuggin' GAME LOOP BYATCH
 while not done:
     #quitting that shit
@@ -91,7 +86,6 @@ while not done:
         p2trail.append([p2x, p2y])
         for i in range(len(p2trail)):
             drawSquares(screen, p2trail[i], BLUE)
-
    
  #Collisions
         for x in cross:
@@ -102,10 +96,8 @@ while not done:
                 playing = False
                 print "Player2 lost"
 
-
     #REFRESH
     cross.append([p1x, p1y])
     cross.append([p2x, p2y])
     pygame.display.flip()
     clock.tick(20)
-
