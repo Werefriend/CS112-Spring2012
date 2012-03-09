@@ -75,9 +75,12 @@ class Circle(Shape):
 #   http://www.mathopenref.com/heronsformula.html
 
 class Polygon(Shape):
-    def __init__(self):
-        pass
+    def __init__(self, *args):
+        for arg in args:
+            pass
+
     def perimeter(self):
         pass
+
     def area(self):
         pass

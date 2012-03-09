@@ -51,10 +51,7 @@ class Point(object):
         return ptstr
 
     def distance(self, other):
-        xsq = (self.x - other.x)**2
-        ysq = (self.y - self.y)**2
-        dist = math.sqrt(xsq + ysq)
-        return dist
+        return math.sqrt((self.x - other.x)**2 + (self.y - other.y)**2)
 
     def move(self, x, y):
         self.x = x
@@ -65,20 +62,15 @@ class Point(object):
         self.y += y
 
     def slope(self, other):
-        sl = (self.y - other.y) / (self.x / other.X)
-        if sl < 0:
-            sl *= -1
-        return sl
+        return float((other.y - self.y) / (other.x - self.x))
 
     def extrapolate(self, slope, distance):
         self.slope = slope
         self.distance = distance
-        xdist = dist / slope
-        ydist = dist * slope
-        newx = xdist + self.x
-        newy = ydist + self.y
-        newpoint = (newx, newy)
-        return newpoint
+        deltaX = distance * cos(slope)
+        deltaY = distance * sin(slope)
+        x2,y2 = (self.x + deltaX), (self.y + deltaY)
+        return x2,y2
 
 # Advanced Section:
 # ---------------------------------------
