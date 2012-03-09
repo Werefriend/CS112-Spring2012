@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+from math import *
+import points
+
 # Shapes
 # =========================================================
 # 
@@ -22,6 +26,38 @@
 #     28.274333882308138
 #     
 
+class Shape(object):
+    def area(self):
+        pass
+    def perimeter(self):
+        pass
+
+class Rect(Shape):
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def area(self):
+        return (self.x*self.y)
+
+    def perimeter(self):
+        return ((self.x*2) + (self.y*2))
+
+class Square(Rect):
+    def __init__(self, s):
+        self.x = s
+        self.y = s
+
+class Circle(Shape):
+    def __init__(self, r):
+        self.r = r
+
+    def area(self):
+        return (pi * (self.r**2))
+
+    def perimeter(self):
+        return (pi * (self.r*2))
+
 # Advanced Section
 # ---------------------------------------------------------
 # Add one more shape type: a polygon.  
@@ -33,3 +69,11 @@
 # 
 # You can find the area of a triangle with Heron's formula:
 #   http://www.mathopenref.com/heronsformula.html
+
+class Polygon(Shape):
+    def __init__(self):
+        pass
+    def perimeter(self):
+        pass
+    def area(self):
+        pass
