@@ -1,0 +1,45 @@
+pseudocode to solve Paul's on-the-fly whiteboard maze
+ - - - - - - - - - - - - - - -
+
+	some variable containing the last movement as degrees
+
+then:
+	if the previous freedom is still available, choose it
+	elif: right is available, turn right
+	elif: left is available, turn left
+	elif: turn 180
+
+then:
+	move forward and repeat
+
+ - - - - - - - - - - - - - - - 
+
+Paul's solution:
+
+store x,y location
+store cardinal direction facing
+store list of intersections
+
+class Room(self):
+      location
+      walls
+      (-1,0) bool
+      (0,1)  bool
+      (1,0)  bool
+      (0,-1) bool
+
+while not at end
+      
+      count all freedoms
+      if # of freedoms == 1
+      	 choose that one
+	 update direction facing
+	 update location
+      elif # of freedoms == 2
+         choose a direction
+	 update direction facing
+	 update location
+      elif # of freedoms > 2
+      	 store location
+	 store direction
+	 

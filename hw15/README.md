@@ -1,57 +1,50 @@
 Homework 15
 ==========================
 Game Pitches
---------------------------
+________________
+Concept 1: "Central Park Snark!"
 
-For this assignment come up with three game ideas (by yourself) that you'd be willing to work on.  The games have to be written in python and pygame, but otherwise you are unconstrained.  They can be in realtime or turnbased, realistic or cartoony, serious or persuassive, etc. 
+* One-player game in which the player is a bird flying low over Central Park.
+  Turning only 4 times, the player racks up points for dispensing poo atop various objects in the park.
+  These may be children playing, old men on benches, weddings, etc.
+  A level ends when the player has flown off the screen, and a player continues to the next level only if they have pooped on enough people.
+  The required number will increment each turn.
 
-Focus on one good concept for a game that could feasibly be developed by two students of unknown or unequal skill level.  You will work on it until the end of the semester. This concept can be a moment of play, how it will feel, a game mechanic, etc.  Your project will then be implementing this one idea really well.  This means do not come up with ideas like "sims 3", more like "angry birds". 
+* This will be a 1942-style bombing game with 2-D graphics, and a lag between the spacebar bombing action and the splat.
 
-> **NOTE:** your final game may be a proof-of-concept for a larger project.
+* Technical hurdles:
+  + animating the turning motion
+  + randomly generating playable levels
+  + stealing art from images.google.com
 
-Advanced students, you are not limited to the use of pygame if there is another library you want to use. We will work together to get whichever library you need working before the end of the semester on at least my laptop and the lab machines.
+________________
+Concept 2: "Whitehouse Shootout: WE IN THE WHITEHOUSE NOW"
 
-### Ideas
- * [Persuasive Games](http://www.persuasivegames.com/)
- * [Serious Games](http://en.wikipedia.org/wiki/Serious_game)
- * [20 Atari Games](http://www.gamasutra.com/view/feature/3679/game_design_essentials_20_atari_.php?print=1)
- * [Youtube](http://www.youtube.com)
+* One-player game in which the player must kill a fixed number of Whitehouse Staff members one by one.
+  The first level would present Press Secretary Robert Gibbs, who doesn't fight you -- 
+    he only talks about how hard the president works for you.
+  Progressive levels would present more intense opponents like 
+    Joe Biden, Hillary Clinton, Leon Panetta, Janet Napolitano, and finally Barack Obama.
+  Barack Obama, however will not fight you.  If you reach Obama, you share a joint, and the text "WE IN THE WHITEHOUSE, NOW"
+    flashes on screen.
 
-### Tools already installed in Lab (we can get more)
- * Physics - [Pymunk](http://code.google.com/p/pymunk/)
- * Networking - [Twisted](http://twistedmatrix.com/trac/)/[Native Python](http://www.tutorialspoint.com/python/python_networking.htm)
- * Menus - [PGU](http://code.google.com/p/pgu/)
+* This will basically be a series of "Punch-the-Monkey" levels with progressive difficulty.
 
+* Technical hurdles:
+  +GRAPHICS -- Lots of images to make, though I don't think the characters would actually have moving body parts
+  
 
-### How to do this homework...
+________________
+Concept 3: "Peel the Potato"
 
-Come up with an elevator pitch (one really descriptive sentence that takes about 15 seconds to say) for each concept.  Mention some similar games or a genre so we can get an idea how the game may look or play.  Then make a list of what you see as the elements involved in making this game.  Place them in this file with the format like the one bellow.  Then, simply turn in your ideas as "hw15".  We will send feedback and questions through github.
+* A potato, composed of some number of brown strips rotates as you peel off the skin to reveal white potato!
+  Click down to touch the peeler to the tuber, slide to peel.  Once you finish a strip, the potato rotates.
+  Randomly dispersed will be dark brown eyes, which must be clicked and removed before peeling is possible for each strip.
 
-Before the end of break, as producers we will "score" the difficulty of each. Then we will green light the project we feel is most reasonable to implement in the time remaining in the course.  If you don't want to get stuck with your throw away idea, make sure you are willing to work on any of the three. You will then need to present this idea on Monday so make sure you flesh out the idea and what is involved.  Also, make a list of what you can bring to the table (art, level design, awesome code) to help find a partner.
+* This will play out kind of like a Warioware or Mario Party mini-game.  It will be AWESOME. Maybe.
 
-----
-
-## Prototype Game
-A simple point-and-click adventure game about perspective of an underachieving game programmer walking the line between pink slip and productivity.
-
-### Genre
-In the style of the old lucasarts adventure games like "Monkey Island".
-
-### Technical Hurdles
- * bottom menu
- * inventory
- * moving character where clicked
- * unique per item behaviors
-
-
-## Block Dude Adventures
-Based on the classic TI83+ game "Blockdude" with metroid-vania/open world level design and multiple block types.
-
-### Genre
-Tiled puzzle sidescroller
-
-### Technical Hurdles
- * multiple block types
- * saved state
- * level loading
- * player equipment
+* Technical hurdles:
+  +Animating the potato will require the generation of lots of peelable brown rectangles that sit next to one another on a strip.
+     Strips will have to be arranged on top of one another so that the middle (closest) is on top, and the rest successively are toward the bg.
+  +Saving scores based on time will require an external high schores file.
+  +Getting the peeler to follow the mouse and hang on an eye will likely not be tremendously difficult.
