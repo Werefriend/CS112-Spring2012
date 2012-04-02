@@ -1,0 +1,29 @@
+Gramercy Snark! CPM
+
+Sam Reeves
+Piper Odegard
+
+____________________________________________________________
+A |Task             | Duration | Effort | Needs   | Feeds   |
+--|-----------------|----------|--------|---------|---------|
+A |Build Level Grid | 1d       | 3h     | --	  | B,C,D,E |
+B |Write Controls   | 2d       | 5h     | A	  | C,E	    |
+C |Design Player    | 1d       | 3h     | A,B	  | E	    |
+D |Design Targets   | 3d       | 8h     | A	  | E	    |
+E |Code Game	    | 8d       | 15h    | A,B,C,D | F,G	    |
+F |Level Generation | 5d       | 10h	| E	  | --	    |
+G |Add Sound	    | 2d       | 5h     | E	  | --	    |
+__|_________________|__________|________|_________|_________|
+
+
+This was created on April 2, 2012.
+
+
+
+1    2	  1	 8      5
+A -> B -> C ---> E ---> F --> FINISHED 17 Days
+0    1 	  3  |	 4  |  12
+     	     |	    |
+     1	     |	    |   2
+     D ------|      --> G
+     3 		       12
